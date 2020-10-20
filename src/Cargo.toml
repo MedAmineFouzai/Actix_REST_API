@@ -1,0 +1,15 @@
+[package]
+name = "Rest_Api"
+version = "0.1.0"
+authors = ["MedAmineFouzai <54685665+MedAmineFouzai@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "2"
+actix-rt = "1"
+mongodb = "0.9.2"
+bson = "0.14.0"
+serde = "1.0.103"
+futures = "0.3.4"
