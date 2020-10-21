@@ -1,47 +1,51 @@
-use std::io;
-use actix_cors::Cors;
-use actix_web::{App, Error, HttpResponse, HttpServer, Responder, get, middleware, web};
+use actix_web::{App, HttpServer};
+use mongodb::{options::ClientOptions, Client};
+use service::{TeamService,CompetitionService,MatchesService};
 
-use futures::future::{err, Either};
-use futures::{Future, Stream};
-
-
-use listenfd::ListenFd;
-
+mod controller;
 mod service;
 
+pub struct ServiceContainer {
+    competition:CompetitionService,
+    team: TeamService,
+    matches:MatchesService
+  
+}
 
-#[get("/")]
-async fn classify() -> impl Responder {
+impl ServiceContainer {
+  pub fn new(competition:CompetitionService,team: TeamService,matches:MatchesService) -> Self {
+    ServiceContainer {competition,team ,matches}
+  }
+}
 
-    let result=service::classifications("5f8b4839d42642b5f38d78db").await;
-    println!("{:?}",result);
-    HttpResponse::Ok().body("ok")
+pub struct AppState{
+    service_container:ServiceContainer,
 
 }
 
+#[actix_rt::main]
+async fn main() -> std::io::Result<()> {
+  const DB:&str="Tournaments";
+  let client_options = ClientOptions::parse("mongodb://localhost:27017").unwrap();
+  let client = Client::with_options(client_options).unwrap();
+  let db = client.database(DB);
 
+  let teams_collection = db.collection("Teams");
+  let competitions_collection=db.collection("Competitions");
+  let matches_collection=db.collection("Matches");
 
-#[actix_web::main]
-async fn main()->io::Result<()>{
+  HttpServer::new(move || {
+    let service_container = ServiceContainer::new(
+        CompetitionService::new(competitions_collection.clone()),
+        TeamService::new(teams_collection.clone()),
+        MatchesService::new(matches_collection.clone())
+    );
 
-let mut listenfd=ListenFd::from_env();
-let mut server=HttpServer::new(move ||{
-            App::new()
-                .wrap(middleware::Logger::default())
-                .wrap(Cors::new()
-                        .allowed_methods(vec!["GET"])
-                        .supports_credentials()
-                        .max_age(3600)
-                        .finish(),
-                    )
-                .service(classify)
-                });
-server= if let Some(listener)=listenfd.take_tcp_listener(0).unwrap(){
-            server.listen(listener)?
-    }else{
-            server.bind("127.0.0.1:8080")?
-    };
-server.run().await
-
+    App::new()
+      .data(AppState { service_container })
+      .service(controller::get)
+    })
+  .bind("0.0.0.0:8080")?
+  .run()
+  .await
 }
