@@ -4,14 +4,14 @@
 Rest Api Using The Actix Framework 
 
 ## Usage
- - git clone https://github.com/MedAmineFouzai/Actix_GraphQl_API
+ - git clone https://github.com/MedAmineFouzai/Actix_REST_API
  - create the Database(Tournaments) import the json files into Mongodb that contains  collections(Competitions,Matches,Teams) to create and import ther owen data.
  
 
 ### server
 
 ```bash
-cd Actix_GraphQl_API
+cd Actix_REST_API
 cargo run 
 ```
 
