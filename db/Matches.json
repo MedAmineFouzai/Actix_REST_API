@@ -1,0 +1,253 @@
+[{
+  "_id": {
+    "$oid": "5f8b5e04bd85b91d0cf41546"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 1,
+  "game": 1,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4851d42642b5f38d78dc"
+    },
+    "away": {
+      "$oid": "5f8b4865d42642b5f38d78dd"
+    }
+  },
+  "scores": {
+    "home": 1,
+    "away": 2
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e70bd85b91d0cf41547"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 1,
+  "game": 2,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4865d42642b5f38d78dd"
+    },
+    "away": {
+      "$oid": "5f8b4851d42642b5f38d78dc"
+    }
+  },
+  "scores": {
+    "home": 0,
+    "away": 2
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e74bd85b91d0cf41548"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 2,
+  "game": 1,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4851d42642b5f38d78dc"
+    },
+    "away": {
+      "$oid": "5f8b4874d42642b5f38d78de"
+    }
+  },
+  "scores": {
+    "home": 0,
+    "away": 0
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e77bd85b91d0cf41549"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 2,
+  "game": 2,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4874d42642b5f38d78de"
+    },
+    "away": {
+      "$oid": "5f8b4851d42642b5f38d78dc"
+    }
+  },
+  "scores": {
+    "home": 0,
+    "away": 2
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e7dbd85b91d0cf4154a"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 3,
+  "game": 1,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4851d42642b5f38d78dc"
+    },
+    "away": {
+      "$oid": "5f8b4881d42642b5f38d78df"
+    }
+  },
+  "scores": {
+    "home": 1,
+    "away": 2
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e85bd85b91d0cf4154b"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 3,
+  "game": 2,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4881d42642b5f38d78df"
+    },
+    "away": {
+      "$oid": "5f8b4851d42642b5f38d78dc"
+    }
+  },
+  "scores": {
+    "home": 4,
+    "away": 3
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e89bd85b91d0cf4154c"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 4,
+  "game": 1,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4865d42642b5f38d78dd"
+    },
+    "away": {
+      "$oid": "5f8b4874d42642b5f38d78de"
+    }
+  },
+  "scores": {
+    "home": 1,
+    "away": 1
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e8dbd85b91d0cf4154d"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 4,
+  "game": 2,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4874d42642b5f38d78de"
+    },
+    "away": {
+      "$oid": "5f8b4865d42642b5f38d78dd"
+    }
+  },
+  "scores": {
+    "home": 0,
+    "away": 4
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e90bd85b91d0cf4154e"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 5,
+  "game": 1,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4865d42642b5f38d78dd"
+    },
+    "away": {
+      "$oid": "5f8b4881d42642b5f38d78df"
+    }
+  },
+  "scores": {
+    "home": 1,
+    "away": 2
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5e95bd85b91d0cf4154f"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 5,
+  "game": 2,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4881d42642b5f38d78df"
+    },
+    "away": {
+      "$oid": "5f8b4865d42642b5f38d78dd"
+    }
+  },
+  "scores": {
+    "home": 2,
+    "away": 2
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5ea2bd85b91d0cf41550"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 6,
+  "game": 1,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4874d42642b5f38d78de"
+    },
+    "away": {
+      "$oid": "5f8b4881d42642b5f38d78df"
+    }
+  },
+  "scores": {
+    "home": 1,
+    "away": 3
+  }
+},{
+  "_id": {
+    "$oid": "5f8b5eb8bd85b91d0cf41551"
+  },
+  "competition": {
+    "$oid": "5f8b4839d42642b5f38d78db"
+  },
+  "round": 6,
+  "game": 2,
+  "teams": {
+    "home": {
+      "$oid": "5f8b4881d42642b5f38d78df"
+    },
+    "away": {
+      "$oid": "5f8b4874d42642b5f38d78de"
+    }
+  },
+  "scores": {
+    "home": 2,
+    "away": 3
+  }
+}]
