@@ -18,5 +18,3 @@ cargo run
 ### web client
 
 [http://localhost:8080/competition/{id}/standings](http://localhost:8080/competition/5f8b4839d42642b5f38d78db/standings)
-
-_
