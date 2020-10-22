@@ -5,7 +5,7 @@ Rest Api Using The Actix Framework
 
 ## Usage
  - git clone https://github.com/MedAmineFouzai/Actix_REST_API
- - create the Database(Tournaments) import the json files into Mongodb that contains  collections(Competitions,Matches,Teams) to create and import ther owen data.
+ - create the Database(Tournaments) import the json files from the db folder into Mongodb that contains  collections(Competitions,Matches,Teams) to create and import ther owen data.
  
 
 ### server
