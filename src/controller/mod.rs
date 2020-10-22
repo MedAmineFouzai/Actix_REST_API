@@ -146,28 +146,28 @@ pub async fn get(
           let mut goal_acuired: i32=0;
 
          let home_team_result=app_data.service_container.matches.get_team_result(
-     competition_state.get_id(),
-            teams_state.teams[team].get_id(),
-           "home",
-            "away");
-
-          let away_team_result=app_data.service_container.matches.get_team_result(
-         competition_state.get_id(),
-                teams_state.teams[team].get_id(),
-               "away",
-                "home");
-
-          let home_team_status=app_data.service_container.matches.get_team_status(
-        competition_state.get_id(),
+               competition_state.get_id(),
                teams_state.teams[team].get_id(),
-              "home",
-                "away");
+               "home",
+               "away");
+
+         let away_team_result=app_data.service_container.matches.get_team_result(
+               competition_state.get_id(),
+               teams_state.teams[team].get_id(),
+               "away",
+               "home");
+
+         let home_team_status=app_data.service_container.matches.get_team_status(
+               competition_state.get_id(),
+               teams_state.teams[team].get_id(),
+               "home",
+               "away");
 
         let away_team_status=app_data.service_container.matches.get_team_status(
-         competition_state.get_id(),
-                teams_state.teams[team].get_id(),
+               competition_state.get_id(),
+               teams_state.teams[team].get_id(),
                "away",
-                "home");
+               "home");
 
         match  home_team_result {
             Ok(mut cur) =>{
