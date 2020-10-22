@@ -134,7 +134,7 @@ pub async fn get(
           Err(e) => {println!("error:{}",e)}    
     };
 
-        //out of scope begin if return functions
+    
     let mut standings:Vec<Team>=Vec::new();
     for team in 1..5{
 
